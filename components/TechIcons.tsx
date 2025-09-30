@@ -5,7 +5,6 @@ import Image from "next/image";
 const TechIcons = () => {
   const skillCategories = [
     {
-      title: "skills",
       skills: [
             { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg", url: "https://kubernetes.io/" },
             {name: "OpenShift", icon: "https://www.vectorlogo.zone/logos/openshift/openshift-icon.svg", url: "https://www.redhat.com/en/technologies/cloud-computing/openshift",},
@@ -29,20 +28,17 @@ const TechIcons = () => {
     },
   ];
 
-  return (
+ return (
     <div className="flex flex-col items-center justify-center w-full py-8">
-      {skillCategories.map((category) => (
-        <div key={category.title} className="mb-8 text-center w-full">
-          <h3 className="text-2xl mb-4 text-gray-800 dark:text-gray-200">
-            {category.title}
-          </h3>
+      {skillCategories.map((category, idx) => (
+        <div key={idx} className="mb-8 text-center w-full">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {category.skills.map((skill) => (
               <a
                 key={skill.name}
                 href={skill.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md transition-transform hover:scale-110"
               >
                 <Image
@@ -51,6 +47,9 @@ const TechIcons = () => {
                   height={40}
                   alt={skill.name}
                   title={skill.name}
+                  sizes="40px"
+                  loading="lazy"
+                  unoptimized
                 />
                 <span className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                   {skill.name}
