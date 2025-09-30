@@ -7,6 +7,7 @@ const TechIcons = () => {
     {
       title: "skills",
       skills: [
+            { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg", url: "https://kubernetes.io/" },
             {name: "OpenShift", icon: "https://www.vectorlogo.zone/logos/openshift/openshift-icon.svg", url: "https://www.redhat.com/en/technologies/cloud-computing/openshift",},
             { name: "RKE2 (Rancher)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rancher/rancher-original.svg", url: "https://docs.rke2.io/" },
             { name: "Helm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg", url: "https://helm.sh/" },
