@@ -13,8 +13,8 @@ interface PersonalInfoProps {
 export default function PersonalInfo({ text }: PersonalInfoProps) {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/cv.png'; 
-    link.download = 'Chaloemrat_CV.png'; 
+    link.href = '/cv.pdf'; 
+    link.download = 'Chaloemrat_CV.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
